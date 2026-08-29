@@ -1,17 +1,44 @@
 export default function FieldServiceInventoryCaseStudy() {
   return (
     <main>
+      <header className="site-header shell">
+        <a className="brand" href="/">
+          BW
+        </a>
+
+        <nav aria-label="Primary navigation">
+          <a href="/">Home</a>
+          <a
+            href="https://github.com/Wheelbc-Virtura/field-service-inventory-showcase"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub ↗
+          </a>
+        </nav>
+      </header>
+
       <section className="case-study-hero shell">
         <p className="eyebrow">Application • Operations • Workflow Design</p>
 
-        <h1>Field Service Inventory & Equipment Tracking System</h1>
+        <h1>Field Service Inventory & Equipment Tracking</h1>
 
         <p className="lede">
           A field-service operations application designed around real inventory,
           equipment-tracking, technician, and audit workflows. The public version
-          is a sanitized showcase that preserves the core product experience
-          while using deterministic demo data instead of production systems.
+          is a sanitized showcase that preserves the core product experience while
+          using deterministic demo data instead of production systems.
         </p>
+
+        <div className="tags">
+          <span>Next.js</span>
+          <span>TypeScript</span>
+          <span>RBAC</span>
+          <span>Inventory</span>
+          <span>Equipment Tracking</span>
+          <span>QR Workflows</span>
+          <span>Audit History</span>
+        </div>
 
         <div className="actions">
           <a
@@ -31,120 +58,149 @@ export default function FieldServiceInventoryCaseStudy() {
           >
             View GitHub ↗
           </a>
-
-          <a className="button secondary" href="/#projects">
-            Back to projects
-          </a>
         </div>
       </section>
 
-      <section className="section shell">
-        <div className="section-heading">
-          <p className="eyebrow">The Problem</p>
-          <h2>Turning operational friction into a structured system</h2>
+      <section className="section shell split-section">
+        <div className="section-heading compact">
+          <p className="eyebrow">Problem</p>
+          <h2>Operational data was useful, but the workflow around it was not.</h2>
         </div>
 
         <div className="case-study-copy">
           <p>
-            Field-service teams depend on accurate information about equipment,
+            Field-service teams need quick access to information about equipment,
             compatible parts, storage locations, technician activity, and asset
-            movement. When that information is fragmented or difficult to search,
-            routine work becomes slower and accountability becomes harder.
+            movement.
           </p>
 
           <p>
-            This project grew out of a real printer and multifunction-device
-            service environment, but the underlying problem is broader: technicians
-            and managers need a reliable way to find inventory information, track
-            equipment, record movement, and understand what changed over time.
+            The original environment was centered on printer and multifunction
+            device service, but the underlying problem was broader: information
+            needed to be easier to search, update, trace, and use during day-to-day
+            technician work.
           </p>
 
           <p>
-            Rather than treat the project as a simple inventory list, I designed
-            it around operational workflows and the people actually using the
-            system.
+            The goal was not simply to build an inventory list. It was to create a
+            system around the actual operational workflows.
           </p>
         </div>
       </section>
 
       <section className="section shell split-section">
         <div className="section-heading compact">
-          <p className="eyebrow">Users & Requirements</p>
-          <h2>Different users needed different levels of access</h2>
+          <p className="eyebrow">My Role</p>
+          <h2>Translated operational needs into application workflows.</h2>
         </div>
 
         <div className="case-study-copy">
           <p>
-            The application supports multiple user roles because the needs of an
-            administrator are different from those of a technician or read-only
-            user.
+            I designed the project around real technician and management use
+            cases, including search, equipment tracking, role-based permissions,
+            auditability, mobile use, and QR-assisted lookup.
           </p>
 
-          <ul className="experience-list">
-            <li>
-              <strong>Administrators</strong> manage system-level records and
-              access.
-            </li>
-            <li>
-              <strong>Managers</strong> work with inventory, equipment, and
-              operational records.
-            </li>
-            <li>
-              <strong>Technicians</strong> need fast lookup and field-friendly
-              workflows.
-            </li>
-            <li>
-              <strong>Viewers</strong> can access information without modifying
-              records.
-            </li>
-          </ul>
-
           <p>
-            Core requirements included search, model and series lookup, equipment
-            tracking, audit history, role-aware actions, QR-assisted workflows,
-            filtering, duplicate prevention, and mobile usability.
+            That meant thinking about the system as more than a front-end
+            interface. User roles, record relationships, movement history, data
+            integrity, and field usability all affected the design.
           </p>
         </div>
       </section>
 
       <section className="section shell">
         <div className="section-heading">
+          <p className="eyebrow">Users & Access</p>
+          <h2>Different users needed different capabilities.</h2>
+        </div>
+
+        <div className="timeline">
+          <article className="experience-card detailed">
+            <div>
+              <h3>Administrator</h3>
+            </div>
+
+            <div className="experience-copy">
+              <p>
+                Full access to system-level records, user roles, inventory,
+                equipment, audit information, and administrative workflows.
+              </p>
+            </div>
+          </article>
+
+          <article className="experience-card detailed">
+            <div>
+              <h3>Manager</h3>
+            </div>
+
+            <div className="experience-copy">
+              <p>
+                Operational access to inventory, equipment, technician workflows,
+                movement events, and related records without exposing every
+                administrative function.
+              </p>
+            </div>
+          </article>
+
+          <article className="experience-card detailed">
+            <div>
+              <h3>Technician</h3>
+            </div>
+
+            <div className="experience-copy">
+              <p>
+                Fast access to lookup, equipment, parts, QR-assisted workflows,
+                and the actions needed during field or service work.
+              </p>
+            </div>
+          </article>
+
+          <article className="experience-card detailed">
+            <div>
+              <h3>Viewer</h3>
+            </div>
+
+            <div className="experience-copy">
+              <p>
+                Read-only access for users who need information without permission
+                to modify operational records.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section className="section shell split-section">
+        <div className="section-heading compact">
           <p className="eyebrow">System Design</p>
-          <h2>Designed around relationships, not isolated records</h2>
+          <h2>Built around relationships instead of isolated records.</h2>
         </div>
 
         <div className="case-study-copy">
           <p>
-            The system models inventory and equipment as related operational data
-            instead of independent lists. Manufacturers, models, series, parts,
-            storage locations, equipment records, users, and activity history all
-            contribute to the workflows technicians and managers use.
+            Manufacturers, models, series, parts, storage locations, equipment,
+            users, and activity history all contribute to the way the application
+            behaves.
           </p>
 
           <p>
-            The original working application was built as a database-backed web
-            application. For the public showcase, the production data layer was
-            removed and replaced with deterministic browser-local demo data so the
-            application remains immediately usable without access to live
-            operational systems.
+            The working application was originally database-backed. For the public
+            showcase, that production data layer was removed and replaced with
+            deterministic browser-local demo data.
           </p>
 
-          <div className="skill-list">
-            <span>Next.js</span>
-            <span>TypeScript</span>
-            <span>Role-Based Access</span>
-            <span>Operational Workflows</span>
-            <span>Audit History</span>
-            <span>QR Workflows</span>
-            <span>Responsive UI</span>
-          </div>
+          <p>
+            This keeps the public deployment immediately usable while preserving
+            the important workflows and relationships.
+          </p>
         </div>
       </section>
 
       <section className="section shell">
         <div className="section-heading">
           <p className="eyebrow">Key Workflows</p>
-          <h2>Focused on the tasks users perform repeatedly</h2>
+          <h2>Focused on tasks users perform repeatedly.</h2>
         </div>
 
         <div className="timeline">
@@ -155,10 +211,8 @@ export default function FieldServiceInventoryCaseStudy() {
 
             <div className="experience-copy">
               <p>
-                Users can search and filter records by model, series, part
-                information, and related criteria so technicians can reach useful
-                information quickly instead of manually navigating disconnected
-                records.
+                Search and filtering help users move from a model, series, or part
+                reference to relevant inventory information quickly.
               </p>
             </div>
           </article>
@@ -170,9 +224,8 @@ export default function FieldServiceInventoryCaseStudy() {
 
             <div className="experience-copy">
               <p>
-                Equipment records can be added, edited, searched, and checked for
-                duplicates. The workflow supports serial-based tracking and
-                provides a clearer history of equipment movement.
+                Equipment records support creation, editing, serial-based lookup,
+                duplicate prevention, and status tracking.
               </p>
             </div>
           </article>
@@ -184,23 +237,22 @@ export default function FieldServiceInventoryCaseStudy() {
 
             <div className="experience-copy">
               <p>
-                Operational events record when inventory or equipment is taken or
-                transferred, giving the system an activity history rather than
-                only showing the current state.
+                Movement events capture when inventory or equipment is taken or
+                transferred, preserving operational history rather than only the
+                current state.
               </p>
             </div>
           </article>
 
           <article className="experience-card detailed">
             <div>
-              <h3>QR-Assisted Workflows</h3>
+              <h3>QR-Assisted Lookup</h3>
             </div>
 
             <div className="experience-copy">
               <p>
-                QR-based labels reduce the number of manual lookup steps required
-                in technician workflows and make the application more practical
-                for use around physical equipment.
+                QR labels reduce manual lookup steps and make the application more
+                practical around physical equipment and technician workflows.
               </p>
             </div>
           </article>
@@ -210,133 +262,111 @@ export default function FieldServiceInventoryCaseStudy() {
       <section className="section shell split-section">
         <div className="section-heading compact">
           <p className="eyebrow">Security & Access Control</p>
-          <h2>Access was treated as part of the workflow design</h2>
+          <h2>Permissions were part of the workflow, not an afterthought.</h2>
         </div>
 
         <div className="case-study-copy">
           <p>
-            Role-based access is a core part of the application rather than an
-            afterthought. Different users are intentionally given different
-            capabilities so read-only users do not receive the same controls as
-            managers or administrators.
+            Role-based access controls what each user can see and modify. A
+            read-only viewer should not receive the same actions as an
+            administrator or manager.
           </p>
 
           <p>
-            The public showcase preserves those role-based interactions using
-            fictional demo users. This allows the authorization model and user
-            experience to remain visible without exposing production accounts or
-            operational data.
+            The public showcase keeps those role differences visible with
+            fictional demo users so visitors can explore how the interface changes
+            between roles.
           </p>
         </div>
       </section>
 
-      <section className="section shell">
-        <div className="section-heading">
-          <p className="eyebrow">Public Showcase & Sanitization</p>
-          <h2>Separating the demonstration from the production system</h2>
+      <section className="section shell split-section">
+        <div className="section-heading compact">
+          <p className="eyebrow">Public Showcase</p>
+          <h2>Separated the demonstration from the production environment.</h2>
         </div>
 
         <div className="case-study-copy">
           <p>
-            The working project connects to real operational data, so publishing
+            The working version connects to live operational data, so publishing
             the production repository directly would have created unnecessary
             privacy and security risk.
           </p>
 
           <p>
-            Instead, I created a standalone public version with production
-            dependencies removed. The showcase uses fictional users, technicians,
+            I created a standalone public version with production dependencies
+            removed and replaced live records with fictional users, technicians,
             equipment, models, parts, locations, audit events, Taken events, and
             transfers.
           </p>
 
           <p>
-            Production credentials, backend identifiers, internal records, live
-            URLs, and real operational data are intentionally excluded. The public
-            repository exists to demonstrate architecture, workflow design, and
-            implementation decisions rather than expose the working environment.
+            Production credentials, internal records, backend identifiers, and
+            live operational data are intentionally excluded.
           </p>
         </div>
       </section>
 
-      <section className="section shell">
-        <div className="section-heading">
-          <p className="eyebrow">Challenges & Tradeoffs</p>
-          <h2>Balancing realism, usability, and public safety</h2>
+      <section className="section shell split-section">
+        <div className="section-heading compact">
+          <p className="eyebrow">Tradeoffs</p>
+          <h2>Reliability and public safety mattered more than backend realism.</h2>
         </div>
 
         <div className="case-study-copy">
           <p>
-            One challenge was preserving enough of the original application to
-            demonstrate meaningful workflows while completely separating the
-            showcase from production data and services.
+            The public showcase uses deterministic local data instead of an
+            external hosted database. That removes dependency on service
+            availability and ensures the demo is immediately usable when someone
+            opens it.
           </p>
 
           <p>
-            The public version therefore favors deterministic local demo data over
-            an external database. That makes the deployed showcase more reliable
-            for portfolio visitors because it does not depend on a hosted database
-            being active, while still allowing the interface and role-based
-            workflows to be explored.
-          </p>
-
-          <p>
-            Another tradeoff was deciding how much of the printer-specific
-            business domain to retain. The showcase keeps the operational concepts
-            that gave the project its real-world context, but presents the system
-            more broadly as a field-service inventory and equipment-tracking
-            platform.
+            The showcase also broadens the presentation from printer-specific
+            inventory to field-service inventory and equipment tracking while
+            keeping the original operational concepts intact.
           </p>
         </div>
       </section>
 
-      <section className="section shell">
-        <div className="section-heading">
+      <section className="section shell split-section">
+        <div className="section-heading compact">
           <p className="eyebrow">Result</p>
-          <h2>A working application built around an actual operational problem</h2>
+          <h2>A working system built around a real operational problem.</h2>
         </div>
 
         <div className="case-study-copy">
           <p>
-            The result is a usable field-service application that combines
-            inventory lookup, equipment tracking, access control, operational
-            events, audit history, QR-assisted workflows, and mobile-friendly
-            interaction in a single system.
+            The finished application combines inventory lookup, equipment
+            tracking, access control, audit history, operational events,
+            QR-assisted workflows, and mobile-friendly interaction in one system.
           </p>
 
           <p>
-            More importantly, the project demonstrates the process of turning a
-            real workflow problem into technical requirements and then building a
+            More importantly, it demonstrates the process of taking an operational
+            problem, translating it into technical requirements, and building a
             system around those requirements.
           </p>
         </div>
       </section>
 
-      <section className="section shell">
-        <div className="section-heading">
+      <section className="section shell split-section">
+        <div className="section-heading compact">
           <p className="eyebrow">What I Learned</p>
-          <h2>The hard part is understanding the operation</h2>
+          <h2>The difficult part is understanding how people actually work.</h2>
         </div>
 
         <div className="case-study-copy">
           <p>
-            This project reinforced that useful software starts with understanding
-            how people actually work. Search behavior, permissions, terminology,
-            mobile layouts, audit records, and seemingly small workflow decisions
-            all affect whether a system is useful in practice.
+            Search behavior, permissions, terminology, mobile layouts, audit
+            records, and small workflow decisions all affect whether a system is
+            useful in practice.
           </p>
 
           <p>
-            It also reinforced the importance of separating production systems
-            from public demonstrations. Creating the sanitized showcase became its
-            own engineering exercise involving dependency removal, fake-data
-            design, security review, deployment validation, and documentation.
-          </p>
-
-          <p>
-            The project sits at the intersection of the areas I want to continue
-            developing: systems thinking, operational problem-solving, security,
-            automation, support, and infrastructure-aware application design.
+            Creating the public showcase also became its own engineering exercise
+            involving dependency removal, fake-data design, security review,
+            deployment validation, and documentation.
           </p>
         </div>
       </section>
@@ -344,7 +374,7 @@ export default function FieldServiceInventoryCaseStudy() {
       <section className="section shell contact-section">
         <div>
           <p className="eyebrow">Explore the Project</p>
-          <h2>Try the public showcase or inspect the source.</h2>
+          <h2>View the application or inspect the public source.</h2>
         </div>
 
         <div className="contact-links">
@@ -366,11 +396,16 @@ export default function FieldServiceInventoryCaseStudy() {
             GitHub ↗
           </a>
 
-          <a className="button secondary" href="/#projects">
+          <a className="button secondary" href="/">
             Back to portfolio
           </a>
         </div>
       </section>
+
+      <footer className="footer shell">
+        <span>Brian Wheeler</span>
+        <span>Field Service Inventory Case Study</span>
+      </footer>
     </main>
   );
 }
