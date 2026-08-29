@@ -33,13 +33,14 @@ const projects = [
     available: true,
   },
   {
-    title: "Green Parts Inventory",
+    title: "Field Service Inventory & Equipment Tracking",
     description:
-      "Internal inventory and equipment-tracking application built around real operational needs, including role-based access, model lookup, QR workflows, audit history, and technician-focused usability.",
+      "Field service inventory and equipment-tracking application built around real operational workflows, including role-based access, model lookup, QR workflows, audit history, equipment movement, and technician-focused usability.",
     tags: ["Next.js", "TypeScript", "RBAC", "QR Workflows", "Operations"],
     href: "",
-    github: "",
-    status: "Case study coming next",
+    demo: "https://field-service-inventory-showcase.vercel.app/",
+    github: "https://github.com/Wheelbc-Virtura/field-service-inventory-showcase",
+    status: "Live showcase",
     available: false,
   },
   {
