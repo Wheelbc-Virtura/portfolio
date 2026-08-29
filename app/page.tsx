@@ -28,6 +28,7 @@ const projects = [
       "Designed and maintain a security-focused Proxmox and Docker environment with trust-based VLAN segmentation, internal DNS, reverse proxy routing, monitoring, remote access, and ZFS-backed storage.",
     tags: ["Proxmox", "Linux", "Docker", "VLANs", "DNS", "ZFS", "Monitoring"],
     href: "/projects/homelab",
+    demo: "",
     github: "https://github.com/Wheelbc-Virtura/homelab",
     status: "Featured case study",
     available: true,
@@ -39,7 +40,8 @@ const projects = [
     tags: ["Next.js", "TypeScript", "RBAC", "QR Workflows", "Operations"],
     href: "",
     demo: "https://field-service-inventory-showcase.vercel.app/",
-    github: "https://github.com/Wheelbc-Virtura/field-service-inventory-showcase",
+    github:
+      "https://github.com/Wheelbc-Virtura/field-service-inventory-showcase",
     status: "Live showcase",
     available: false,
   },
@@ -49,6 +51,7 @@ const projects = [
       "Support automation and troubleshooting work covering scripting, DNS repair, system checks, backups, documentation, and repeatable operational tasks.",
     tags: ["Python", "PowerShell", "Automation", "Support", "Documentation"],
     href: "",
+    demo: "",
     github: "",
     status: "Case study in development",
     available: false,
@@ -125,6 +128,7 @@ export default function Home() {
         <div className="section-heading">
           <p className="eyebrow">Selected work</p>
           <h2>Projects that prove the work</h2>
+
           <p>
             Each case study focuses on the problem, technical decisions,
             implementation, troubleshooting, and lessons learned—not just the
@@ -152,7 +156,19 @@ export default function Home() {
                 {project.available ? (
                   <a href={project.href}>View case study →</a>
                 ) : (
-                  <span className="coming-soon">Case study coming soon</span>
+                  <span className="coming-soon">
+                    Case study coming soon
+                  </span>
+                )}
+
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live demo ↗
+                  </a>
                 )}
 
                 {project.github && (
@@ -224,12 +240,12 @@ export default function Home() {
                 </li>
                 <li>
                   Troubleshoot hardware, software, connectivity, and
-                  configuration problems during build, delivery, remote
-                  support, and onsite deployment.
+                  configuration problems during build, delivery, remote support,
+                  and onsite deployment.
                 </li>
                 <li>
-                  Apply device hardening and security policies to support
-                  secure customer environments.
+                  Apply device hardening and security policies to support secure
+                  customer environments.
                 </li>
                 <li>
                   Manage multiple concurrent deployments while maintaining
@@ -273,8 +289,8 @@ export default function Home() {
                   information for process improvement.
                 </li>
                 <li>
-                  Tested internal software changes and communicated user
-                  feedback and usability issues.
+                  Tested internal software changes and communicated user feedback
+                  and usability issues.
                 </li>
               </ul>
             </div>
@@ -331,6 +347,7 @@ export default function Home() {
 
           <div className="future-credentials">
             <p className="panel-label">Planned / In Progress</p>
+
             <p>
               Continuing advanced security coursework with CCSP, CySA+, and
               PenTest+ targeted as part of ongoing professional and degree
