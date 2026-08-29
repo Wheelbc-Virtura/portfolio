@@ -379,21 +379,13 @@ export default function Home() {
             View GitHub
           </a>
 
-          {/*
-            Add your resume PDF to:
-            public/Brian-Wheeler-Resume.pdf
-
-            Then uncomment this button:
-
-            <a
-              className="button secondary"
-              href="/Brian-Wheeler-Resume.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Download résumé
-            </a>
-          */}
+          <a
+            className="button secondary"
+            href="/Brian-Wheeler-Resume.pdf"
+            download
+          >
+            Download Résumé
+          </a>
 
           <a
             className="button secondary"
