@@ -38,12 +38,12 @@ const projects = [
     description:
       "Field service inventory and equipment-tracking application built around real operational workflows, including role-based access, model lookup, QR workflows, audit history, equipment movement, and technician-focused usability.",
     tags: ["Next.js", "TypeScript", "RBAC", "QR Workflows", "Operations"],
-    href: "",
+    href: "/projects/field-service-inventory",
     demo: "https://field-service-inventory-showcase.vercel.app/",
     github:
       "https://github.com/Wheelbc-Virtura/field-service-inventory-showcase",
-    status: "Live showcase",
-    available: false,
+    status: "Featured case study",
+    available: true,
   },
   {
     title: "IT Automation & Support Toolkit",
